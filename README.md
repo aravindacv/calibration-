@@ -50,14 +50,15 @@ Section 1 of the notebook reads two split tables (`c3/split.csv`, `c8/ext_split.
 | `corr_cal_logits_v2.npz`, `corr_cal_logits_fresh.npz` | Sections 4, 5 | Logits on the corrupted calibration set, seeds 0-2 and 3-5 |
 | `l3_rows.csv`, `l3_ens.csv`, `m1_rows.csv` | Section 4 | Exploratory ladder and matcher results |
 | `m3_rows.csv` | Section 6 | Confirmatory matcher results |
-| `faith_all_models.jsonl`, `faith_centre.jsonl` | Section 7 | Per-image deletion/insertion AUCs |
-| `tables/ladder_rows.csv`, `tables/ladder_ens.csv`, `tables/ece_binning.csv` | Sections 8, 9 | Rows behind the paper tables |
+| `faith_all_models.jsonl` | Section 7 | Per-image deletion/insertion AUCs, Grad-CAM and random order |
+| `faith_centre.jsonl` | Section 7 | Per-image deletion/insertion AUCs, centre order |
+| `ece_binning.csv` | Section 9 | ECE under four binning schemes (Supplementary Table S3) |
 
 Model weights (`model_*.pt`) are not included because of their size; they are available from the corresponding author on request.
 
 ## Rerunning
 
-Copy the contents of `results/` into `/kaggle/working` (or the working directory) and run the analysis cells (Sections 4, 6, 8, 9, 11) on CPU. Retraining (Sections 2, 3, 5) and the Grad-CAM tests (Section 7) need a GPU and the image datasets.
+Copy the contents of `results/` into `/kaggle/working` (or the working directory) and run the analysis cells (Sections 4, 6, 8, 9, 11) on CPU. Section 8 regenerates the table rows (`tables/ladder_rows.csv`, `tables/ladder_ens.csv`) from the `preds_*` files. Retraining (Sections 2, 3, 5) and the Grad-CAM tests (Section 7) need a GPU and the image datasets.
 
 ## Contact
 
