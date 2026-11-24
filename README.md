@@ -12,6 +12,7 @@ The study trains 24 EfficientNet-B0/B3 classifiers on MILK10k dermoscopy (cross-
 |---|---|
 | `calibration_shift_milk10k.ipynb` | All experiment cells, in the order they were run (Kaggle, GPU T4 for training and Grad-CAM). |
 | `results/` | Derived files that reproduce every table and figure without retraining (see below). |
+| `posthoc_analysis.py` | Post hoc analyses (paper Section 6.6, Tables 6-7): ATC and corruption-regression gap estimates, BBSD versus the alarm, label-budget curve. Run `python posthoc_analysis.py results` on CPU. |
 
 ## Notebook sections and paper mapping
 
